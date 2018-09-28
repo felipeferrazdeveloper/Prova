@@ -135,19 +135,19 @@ class professorDAO
      <thead>
        <tr class='active'>
         <th>Código</th>
-        <th>Matricula</th>
         <th>Nome</th>
+        <th>Cargo</th>
         <th colspan='2'>Ações</th>
        </tr>
      </thead>
      <tbody>";
             foreach ($dados as $var):
                 echo "<tr>
-        <td>$var->idAluno</td>
-        <td>$var->Matricula</td>
+        <td>$var->idProfessor</td>
         <td>$var->Nome</td>
-        <td><a href='?act=upd&id=$var->idAluno'><i class='ti-reload'></i></a></td>
-        <td><a href='?act=del&id=$var->idAluno'><i class='ti-close'></i></a></td>
+        <td>$var->Cargo</td>
+        <td><a href='?act=upd&id=$var->idProfessor'><i class='ti-reload'></i></a></td>
+        <td><a href='?act=del&id=$var->idProfessor'><i class='ti-close'></i></a></td>
        </tr>";
             endforeach;
             echo "
