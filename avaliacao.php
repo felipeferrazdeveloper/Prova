@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "upd" && $id != "") {
-    $avaliacao = new $avaliacao($id, '', '', '', '', '', '');
+    $avaliacao = new avaliacao($id, '', '', '', '', '', '');
     $resultado = $object->atualizar($avaliacao);
     $nota1 = $resultado->getNota1();
     $nota2 = $resultado->getNota2();
@@ -53,7 +53,7 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "upd" && $id != "") {
 }
 
 if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nota1 != "") {
-    $avaliacao = new $avaliacao($id, $nota1, $nota2, $notafinal, $curso, $aluno, $turma);
+    $avaliacao = new avaliacao($id, $nota1, $nota2, $notafinal, $curso, $aluno, $turma);
     $msg = $object->salvar($avaliacao);
     $id = null;
     $nota1 = null;
@@ -65,8 +65,8 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nota1 != "") {
 }
 
 if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id != "") {
-    $curso = new curso($id, '', '', '');
-    $msg = $object->remover($curso);
+    $avaliacao = new avaliacao($id, '', '', '', '', '', '');
+    $msg = $object->remover($avaliacao);
     $id = null;
 }
 

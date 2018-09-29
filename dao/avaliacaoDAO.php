@@ -87,12 +87,12 @@ class avaliacaoDAO
             if ($statement->execute()) {
                 $rs = $statement->fetch(PDO::FETCH_OBJ);
                 $avaliacao->setIdAvaliacao($rs->idAvaliacao);
-                $avaliacao->setNota1($rs->nota1);
-                $avaliacao->setNota2($rs->nota2);
-                $avaliacao->setNotaFinal($rs->notaFinal);
-                $avaliacao->setCurso($rs->curso);
-                $avaliacao->setAluno($rs->aluno);
-                $avaliacao->setTurma($rs->turma);
+                $avaliacao->setNota1($rs->Nota1);
+                $avaliacao->setNota2($rs->Nota2);
+                $avaliacao->setNotaFinal($rs->NotaFinal);
+                $avaliacao->setCurso($rs->Curso_idCurso);
+                $avaliacao->setAluno($rs->Aluno_idAluno);
+                $avaliacao->setTurma($rs->Turma_idTurma);
 
                 return $avaliacao;
             } else {
