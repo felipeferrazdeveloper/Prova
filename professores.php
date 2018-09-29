@@ -78,7 +78,7 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id != "") {
                                 echo (isset($nome) && ($nome != null || $nome != "")) ? $nome : '';
                                 ?>"/>
                                 Cargo:
-                                <input type="text" size="25" name="sigla" value="<?php
+                                <input type="text" size="25" name="cargo" value="<?php
                                 // Preenche o sigla no campo sigla com um valor "value"
                                 echo (isset($cargo) && ($cargo != null || $cargo != "")) ? $cargo : '';
                                 ?>"/>
